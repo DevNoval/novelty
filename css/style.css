@@ -99,7 +99,6 @@ body {
     background: var(--card);
     padding: 24px;
     border-radius: 12px;
-    overflow: scroll;
     transition: all 0.2s;
 }
 
@@ -234,3 +233,4 @@ body {
     }
 
 }
+
