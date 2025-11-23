@@ -10,17 +10,13 @@
 </head>
 <body>
     <header class="header">
-        <h2>{Novelty.Dev}</h2>
-
-        <div class="menu-btn" id="menuBar">
-            <img src="img/burger-bar.svg">
-        </div>
-        
+        <h2 id="headerLogo">{Novelty.Dev}</h2>
+        <i class="fa fa-bars menu-btn" id="menuBar"></i>
         <nav class="navbar hidden" id="navbarId">
             <a href="#">[Home]</a>
             <a href="#about">[About]</a>
             <a href="#project">[Project]</a>
-            <a href="#blog">[Blog]</a>
+            <a href="https://napraditha.blogspot.com/">[Blog]</a>
         </nav>
     </header>
 
@@ -33,42 +29,50 @@
                 <button class="btn">GNU/Linux</button>
                 <button class="btn">NeoVim</button>
                 <h1>Welcome to Novelty.Dev website!</h1>
-                <p>A <s title="NO I DID NOT VIBE CODED THIS WEBSITE!!!">Vibe coder</s> Junior programmer and a student from Indonesia. The dev in the name has nothing to do with developer, I just thought it was cool to add.</p>
+                <p>A <s>Vibe coder</s> Junior programmer and a student from Indonesia. The dev in the name has nothing to do with developer, I just thought it was cool to add.</p>
             </div>
-            
-            <img src="img/angelDevil.jpeg" class="home-logo">
+            <div class="clock-container">
+                <div id="clock">00:00:00</div>
+                <div id="date">xx/xx/xxxx</div>
+            </div>
         </main>
     </div>
-        
-    <div class="content">
-        <div class="content-box" id="about">
-            <h2>About me</h2>
-            <p>You can call me Noval. I'm a student from Indonesia who are interested in math, computer science and engineering. A Junior Dev who are currently learning Python, JavaScript, and C. The website are still empty because I don't know what to put in here. <a href="#footer">Contact</a> me if you have any suggestion</p>
-        </div>
-        
-        <div class="content-box" id="project">
-            <h2>Projects</h2>
-            <p>You can look my project on my github. Click <a href="https://github.com/DevNoval">More</a></p>
-        </div>
-        
-        <div class="content-box" id="blog">
-            <h2>Blog</h2>
-            <p>Noval currently haven't post any blog yet</p>
+
+    <div class="container" id="about">
+        <h2>About me</h2>
+        <div class="container-box">
+            <img src="img/angelDevil.jpeg" class="logo">
+            <div>
+                <h3>You can call me Noval</h3>
+                <p>I'm a student from Indonesia who are interested in math, computer science and engineering. I graduate from highschool in 2026, and now continue my academy in [insert future college and degree].</p>
+                <p>Programming languages I learn: Python, JavaScript, and C.</p>
+                <p>Future Career: Web Dev, CyberSec, Data Analysist</p>
+            </div>
         </div>
     </div>
-
+    <hr>
+    <div class="container" id="project">
+        <h2>Project</h2>
+        <small><p>Project I recently made:</p></small>
+        <div class="container-grid">
+            <div class="card">
+                <p>I haven't made any project</p>
+            </div>
+        </div>
+        <small><p>You can also check my project in my github!</p></small>
+    </div>
+    <hr>
     <footer class="footer" id="footer">
         <h2>Where you can find me:</h2>
         <div class="link">
-            <a href="https://www.youtube.com/@NoveltyNoval" alt="[Youtube]" title="Youtube"><i class="fa fa-youtube-play"></i></a>
-            <a href="https://www.instagram.com/novelty_noval" alt="[Instagram]" title="instagram"><i class="fa fa-instagram"></i></a>
-            <a href="https://www.github.com/DevNoval" alt="[Github]" title="Github"><i class="fa fa-github"></i></a>
-            <a href="https://www.linkedin.com" alt="[Linkedin]" title="Linkedin"><i class="fa fa-linkedin-square"></i></a>
+            <a href="https://www.youtube.com/@NoveltyNoval" title="Youtube"><i class="fa fa-youtube-play"></i></a>
+            <a href="https://www.instagram.com/novelty_noval" title="instagram"><i class="fa fa-instagram"></i></a>
+            <a href="https://www.github.com/DevNoval" title="Github"><i class="fa fa-github"></i></a>
+            <a href="https://www.linkedin.com" title="Linkedin"><i class="fa fa-linkedin-square"></i></a>
         </div>
-
         <small>Email: napraditha298@gmail.com</small><br>
         <small>Discord: novelty.dev</small><br>
-        <a href="#"><button class="btn">Go back to top</button></a>
+        <button class="btn scroll-btn" id="scrollBtn" title="Go back to top">^</button>
     </footer>
 
     <script src="js/script.js"></script>
