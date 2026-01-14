@@ -256,6 +256,7 @@ button:hover {
         padding-block: 10vh;
     }
 
+    .sidebar li {border-bottom: 1px solid var(--subtext);}
     .home {width:100%;}
     .pfp {height: 200px;}
     #clock {font-size: 3rem;}
