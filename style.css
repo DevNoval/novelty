@@ -39,7 +39,7 @@ body.theme-light {
     --ambient: rgba(128, 128, 128, 0.3);
 }
 
-button, .card, .container-flex {
+button, nav, .card, .container-flex {
     box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1), 0 4px 4px rgba(0, 0, 0, 0.15);
 }
 
@@ -239,7 +239,6 @@ button:hover {
 @media (max-width: 720px) {
     body {
         font-size: 1rem;
-        background-attachment: scroll;
     }
 
     .navbar li:not(:first-child, :last-child) { display: none; }
@@ -262,4 +261,8 @@ button:hover {
     #clock {font-size: 3rem;}
     .container-flex {padding: 3rem 1.5rem;}
     .container-grid { grid-template-columns : 1fr; }
+}
+
+@media (max-device-width: 720px) {
+    body {background-attachment: scroll;}
 }
