@@ -3,6 +3,23 @@ const menuBtn = document.getElementById('menuBars');
 const sidebar = document.getElementById('sidebar');
 const closeBtn = document.getElementById('closeBtn');
 const themeBtn = document.getElementById('themeBtn');
+// Local Storage
+
+function userPreferences() {
+    localStorage.setItem("user_prefs", JSON.stringify({
+	theme: document.body.classList.contains("theme-light")? "light" : "dark"
+    }));
+}
+
+function loadPreferences() {
+    try {
+	const preferences = JSON.parse(localStorage.getItem("user_prefs"));
+	if (!preferences) return;
+	document.body.classList.toggle("theme-light", preferences.theme === "light");
+    	themeBtn.textContent = preferences.theme === "light" ? "🌙 Dark" : "☀️ Light";
+    } catch (error) {console.error("Gagal load prefs:", error); }
+}
+
 
 // Hamburger button
 menuBtn.addEventListener("click", (e) => {
@@ -65,7 +82,14 @@ scrollBtn.addEventListener('click', topFunction);
 // Theme Switcher
 function toggleTheme() {
     document.body.classList.toggle('theme-light');
-    themeBtn.textContent = document.body.classList.contains('theme-light') ? '☀️ Light' : '🌙 Dark'; 
+    themeBtn.textContent = document.body.classList.contains('theme-light') ? '☀️ Light' : '🌙 Dark';
+    userPreferences();
 }
 
 themeBtn.addEventListener('click', toggleTheme);
+
+window.addEventListener("DOMContentLoaded", async () => {
+    loadPreferences();
+});
+
+
