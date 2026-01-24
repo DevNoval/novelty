@@ -3,8 +3,8 @@ const menuBtn = document.getElementById('menuBars');
 const sidebar = document.getElementById('sidebar');
 const closeBtn = document.getElementById('closeBtn');
 const themeBtn = document.getElementById('themeBtn');
-// Local Storage
 
+// Local Storage
 function userPreferences() {
     localStorage.setItem("user_prefs", JSON.stringify({
 	theme: document.body.classList.contains("theme-light")? "light" : "dark"
@@ -19,7 +19,6 @@ function loadPreferences() {
     	themeBtn.textContent = preferences.theme === "light" ? "🌙 Dark" : "☀️ Light";
     } catch (error) {console.error("Gagal load prefs:", error); }
 }
-
 
 // Hamburger button
 menuBtn.addEventListener("click", (e) => {
@@ -87,9 +86,6 @@ function toggleTheme() {
 }
 
 themeBtn.addEventListener('click', toggleTheme);
-
 window.addEventListener("DOMContentLoaded", async () => {
     loadPreferences();
 });
-
-
