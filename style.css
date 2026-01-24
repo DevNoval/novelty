@@ -27,7 +27,7 @@ body {
     font-family: 'Jetbrains Mono Nerd Font', monospace;
     font-size: 1.2rem;
     color: var(--text);
-    background:var(--bg) url(img/mono-bg-01.png) center / cover fixed;
+    background:var(--bg) url(img/mono-bg-01.webp) center / cover fixed;
 }
 
 body.theme-light {
