@@ -16,7 +16,7 @@ function loadPreferences() {
 	const preferences = JSON.parse(localStorage.getItem("user_prefs"));
 	if (!preferences) return;
 	document.body.classList.toggle("theme-light", preferences.theme === "light");
-    	themeBtn.textContent = preferences.theme === "light" ? "🌙 Dark" : "☀️ Light";
+    themeBtn.textContent = preferences.theme === "light" ? "🌙 Dark" : "☀️ Light";
     } catch (error) {console.error("Gagal load prefs:", error); }
 }
 
@@ -81,7 +81,7 @@ scrollBtn.addEventListener('click', topFunction);
 // Theme Switcher
 function toggleTheme() {
     document.body.classList.toggle('theme-light');
-    themeBtn.textContent = document.body.classList.contains('theme-light') ? '☀️ Light' : '🌙 Dark';
+    themeBtn.textContent = document.body.classList.contains('theme-light') ? '🌙 Dark' : '☀️ Light';
     userPreferences();
 }
 
