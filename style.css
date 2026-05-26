@@ -195,6 +195,7 @@ button {
     background: var(--card);
     color: var(--text);
     transition: 0.2s ease-in-out;
+    cursor: pointer;
 }
 
 button:hover {
